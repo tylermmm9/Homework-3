@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + '/chat');
-    const chatBox = document.getElementById("chat");
+  const socket = io(window.location.origin + '/chat', {
+    transports: ['polling'],
+    secure: true
+  });
+  const chatBox = document.getElementById("chat");
   
     socket.on('connect', () => {
       socket.emit('joined', {});
