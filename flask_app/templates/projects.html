@@ -1,0 +1,32 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/projects.css') }}">
+
+<main>
+    <div class="purpose">
+        <h1>Projects</h1>
+        <p>This page showcases my current project work.</p>
+    </div>
+
+    <div class="project-row">
+        <!-- Project image and link -->
+        <div class="project-image">
+            <a href="{{ url_for('piano') }}">
+                <img src="{{ url_for('static', filename='main/images/piano.jpeg') }}" 
+                     alt="Piano Project Image" 
+                     class="project-image">
+            </a>
+        </div>
+
+        <!-- Project description -->
+        <div class="project-info">
+            <h2>Piano Project</h2>
+            <p>A project to create a piano using HTML, CSS, and JavaScript.
+                You can play notes by clicking the keys or by typing them.
+            </p>
+            <a href="{{ url_for('piano') }}" class="project-link">Project Link</a>
+        </div>
+    </div>
+</main>
+{% endblock %}

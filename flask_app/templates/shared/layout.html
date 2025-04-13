@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tyler Murray's Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">
+  {% block extracss %}{% endblock %}
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  {% block extrajs %}{% endblock %}
+</head>
+<body>
+    <article>
+    <!-- Header Section -->
+    <header class="header">
+        <img src="{{ url_for('static', filename='main/images/banner.jpg') }}" 
+             loading="lazy" 
+             alt="MSU Banner" 
+             class="banner">
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a class="assignment" href="/home">Home</a>
+        <div class="nav-links">
+            <a class="menu" href="https://www.linkedin.com/in/tyler-murray-7026ab1b8/">
+                <img src="{{ url_for('static', filename='main/images/social-linkedin.png') }}"
+                     alt="LinkedIn" 
+                     width="25">
+            </a>
+            <a class="menu" href="/resume">Resume</a>
+            <a class="menu" href="/projects">Projects</a>
+            <a class="menu" id="buttonFeedback">Feedback</a>
+            
+        
+            {% if 'email' in session %}
+            <a class="menu" href="/chat">Chat</a>
+            <a href="/logout">Logout ({{ db.reversibleEncrypt('decrypt', session['email']) }})</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+
+
+
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- Feedback Form -->
+    <form id="feedback" action="/processfeedback" method="POST">
+        <h1>Submit Feedback:</h1>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="comment" placeholder="Comment" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Tyler Murray</p>
+        {% if session.get('email') %}
+            <p>Logged in as: {{ session.get('role') }}</p>
+        {% endif %}
+    </footer>
+    </article>
+</body>
+</html>

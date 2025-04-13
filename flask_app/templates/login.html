@@ -1,0 +1,27 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/login.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='main/js/login.js') }}" defer></script>
+{% endblock %}
+
+{% block maincontent %}
+<div class="login-container">
+    <h1>Login</h1>
+    <form id="login">
+        <input type="email" name="email" placeholder="Your Email" 
+               title="Enter your registered email" required>
+        <input type="password" name="password" placeholder="Your Password" 
+               title="Enter your password" required>
+        <button type="submit">Submit</button>
+        
+        <div id="login-error" class="error-message"></div>
+        <div id="attempts" class="attempts-display">
+            Login Attempts: <span id="count-display">0</span>
+        </div>
+    </form>
+</div>
+{% endblock %}

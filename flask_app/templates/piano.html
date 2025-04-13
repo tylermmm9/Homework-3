@@ -1,0 +1,38 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/piano.css') }}">
+
+<main>
+    <p>"Behold piano great and old, its master slumbers in far off cold, 
+        If you wish to see anew, call out to it - we see you."</p>
+
+    <div class="piano-container">
+        <h1 class="piano-name">The Great Old One</h1>
+        <div class="piano">
+            <!-- White keys -->
+            <div class="white-key" data-key="A"></div>
+            <div class="white-key" data-key="S"></div>
+            <div class="white-key" data-key="D"></div>
+            <div class="white-key" data-key="F"></div>
+            <div class="white-key" data-key="G"></div>
+            <div class="white-key" data-key="H"></div>
+            <div class="white-key" data-key="J"></div>
+            <div class="white-key" data-key="K"></div>
+            <div class="white-key" data-key="L"></div>
+            <div class="white-key" data-key=";"></div>
+
+            <!-- Black keys -->
+            <div class="black-key" data-key="W"></div>
+            <div class="black-key" data-key="E"></div>
+            <div class="black-key" data-key="T"></div>
+            <div class="black-key" data-key="Y"></div>
+            <div class="black-key" data-key="U"></div>
+            <div class="black-key" data-key="O"></div>
+            <div class="black-key" data-key="P"></div>
+        </div>
+    </div>
+</main>
+
+<script src="{{ url_for('static', filename='main/js/piano.js') }}"></script>
+{% endblock %}

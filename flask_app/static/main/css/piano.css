@@ -1,0 +1,365 @@
+/* General Styles */
+body {
+    background-color: #18453B;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: 30vh; /* Adjusts based on viewport height */
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.assignment-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    opacity: 0.7; /* Fade effect on hover */
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Profile Section Styles */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    max-height: 50vh;
+    margin: auto;
+}
+
+.profile-info {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+.profile-image {
+    flex: 1;
+    width: 224px;
+    height: 218px;
+    object-fit: cover;
+}
+
+/* Main Content Styles */
+main {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Page Purpose Section */
+.page-purpose {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-purpose h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-purpose p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Project Row Styles */
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-description {
+    flex: 1;
+}
+
+.project-description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-description p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+/* Box Styles */
+.box {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* Adjusts height dynamically based on content */
+    padding: 25px;
+    border: 5px solid black;
+    color: black;
+    background-color: white;
+    box-sizing: border-box; /* Ensures padding/border don’t increase width */
+}
+
+/* Photo Box Styles */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.photo-box {
+    padding: 10px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100px; /* Adjust this value as needed */
+    overflow: hidden;
+}
+
+.photo-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffffff; /* Different from main */
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 650px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .linkedin-icon::before {
+        content: "LinkedIn";
+        font-size: 16px;
+    }
+
+    /* Make columns stack on top of each other */
+    .profile-section {
+        flex-direction: column;
+    }
+
+    /* Adjust project row for mobile */
+    .project-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-image img {
+        width: 100%;
+    }
+}
+
+
+/* Piano Container */
+.piano-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.piano {
+    position: relative;
+    display: flex;
+    background-color: #2C2C2C;
+    padding: 250px 30px 5px 30px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.piano-name {
+    color: white;
+    font-family: lazer 84;
+    font-size: 1.5rem;  /* Increased font size */
+    margin-bottom: 20px;  /* Increased margin */
+    text-align: center;
+    font-style: italic;  /* Added italic style */
+    position: absolute;
+    z-index: 1;
+}
+
+/* White Keys */
+.white-key {
+    width: 40px;
+    height: 200px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    margin: 0 2px;
+    z-index: 1;
+}
+
+.white-key::after {
+    content: attr(data-key);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Black Keys */
+.black-key {
+    width: 25px;
+    height: 125px;
+    background: #000;
+    position: absolute;
+    z-index: 2;
+    border-radius: 0 0 3px 3px;
+}
+
+.black-key::after {
+    content: attr(data-key);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Position black keys */
+.black-key:nth-of-type(1) { left: 100px; }  /* W */
+.black-key:nth-of-type(2) { left: 185px; }  /* E */
+.black-key:nth-of-type(3) { left: 225px; } /* T */
+.black-key:nth-of-type(4) { left: 270px; } /* Y */
+.black-key:nth-of-type(5) { left: 245px; } /* U */
+.black-key:nth-of-type(6) { left: 333px; } /* O */
+.black-key:nth-of-type(7) { left: 377px; } /* P */
+
+/* Show letters on hover */
+.piano:hover .white-key::after,
+.piano:hover .black-key::after {
+    opacity: 1;
+}
+
+.white-key.pressed {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #f0f0f0;
+}
+
+.black-key.pressed {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+}
+
+/* this will awaken the great one ======================================================= */
+.piano-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    border-radius: 20px;
+
+}
+
+.piano-image {
+    width: 100%; 
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover; 
+}
+
+.awoken-text {
+    color: white;
+    font-family: 'Lazer 84', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}

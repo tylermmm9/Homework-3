@@ -1,0 +1,33 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<main>
+  <div class="profile-container">
+    <div class="profile-section">
+        <img id="profile-image" src="{{ url_for('static', filename='main/images/profile.jpg') }}" alt="Profile Picture" class="profile-image">
+        <div class="profile-info">
+            <h1>Tyler Murray</h1>
+            <div class="box">
+                Junior Computer Science student at Michigan State University. I love to code. I spend my free time playing video games and powerlifting. 
+                I have experience in: 
+                <ul>
+                    <li>HTML</li> 
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li> 
+                    <li>C++</li> 
+                    <li>C</li>
+                    <li>ARM Assembly</li>
+                </ul>
+                When it comes to powerlifting, I have been training for 4 years. I can currently bench press 280 lbs, squat 400 lbs, and deadlift 405 lbs. I am currently playing Metaphor ReFantazio!
+
+                I will be interning this summer at Auto-Owners Insurance as a Claims Systems Intern. I am also serving as Executive Vice President of Triangle Fraternity at Michigan State University.
+            </div>
+        </div>
+    </div>
+
+    <div class="fun-fact-container">
+        <p>A fun fact about me: <b>{{ fun_fact }}</b></p>
+    </div>
+</main>
+{% endblock %}

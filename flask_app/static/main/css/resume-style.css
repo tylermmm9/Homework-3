@@ -1,0 +1,51 @@
+body {
+    background-color: #18453B; /* Set background color */
+    color: white;              /* Set text color to white */
+}
+/* For the institution in the resume */
+.Institution{
+    float:left;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+/*Location of the institution in the resume */
+.Location{
+    text-align:right;
+    font-size: 20px;
+}
+/* Title of the position in the resume*/
+.title{
+    font-style: italic;
+    font-size: 20px;
+    float: left;
+}
+/* To assign the bullet type*/
+ul{
+    list-style-type: square;
+}
+/* Date aspect of the resume*/
+.date{
+    float:right;
+    font-size: 15px;
+}
+/*formating for the responsiblities part of the resume*/
+.responsibilities{
+    text-align: left;
+    padding-left: 10%;
+}
+
+/* For the feedback form */
+#feedback {
+    font-family:Arial, Helvetica, sans-serif;
+        color: #f2f2f2;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background: #5c5c5c;
+  padding: 20px;
+
+}

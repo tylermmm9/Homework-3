@@ -1,0 +1,13 @@
+{% extends 'shared/layout.html' %}
+{% block maincontent %}
+<h1>Thank you for your feedback!</h1>
+    {%  if feedback != [] %}
+        <h2>Here's what other people said:</h2>
+            {%  for dictt in feedback %}
+                <li>{{ dictt['name'] }} said: {{ dictt['comment']}}
+            {% endfor %}
+        </li>
+    {% endif %}
+{% endblock %}
+
+

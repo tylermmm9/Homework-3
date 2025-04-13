@@ -1,0 +1,73 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resume-style.css') }}">
+
+<div class="contact-info">
+    <h1>{{ resume_data.name }}</h1>
+    <p>{{ resume_data.location }} | {{ resume_data.contact.email }} | {{ resume_data.contact.phone }} | <a href="{{ resume_data.contact.linkedin }}" target="_blank">LinkedIn</a></p>
+</div>
+
+<div class="objective">
+    <h2>Objective</h2>
+    <p>{{ resume_data.objective }}</p>
+</div>
+
+<div class="education">
+  <h2>EDUCATION</h2> <!-- Added this heading -->
+  <p class="Institution">{{ resume_data.education[0].institution }}</p>
+  <p>{{ resume_data.education[0].degree }}, {{ resume_data.education[0].gpa }} ({{ resume_data.education[0].dates }})</p>
+</div>
+
+<div class="experience">
+    <h2>Experience</h2>
+    {% for job in resume_data.experience %}
+        <h3>{{ job.title }} - {{ job.company }} ({{ job.dates }})</h3>
+        <p>{{ job.location }}</p>
+        <ul>
+            {% for responsibility in job.responsibilities %}
+                <li>{{ responsibility }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
+
+<div class="projects">
+    <h2>Projects</h2>
+    {% for project in resume_data.projects %}
+        <h3>{{ project.title }} ({{ project.dates }})</h3>
+        <p>{{ project.location }}</p>
+        <ul>
+            {% for description in project.description %}
+                <li>{{ description }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
+
+<div class="technical-skills">
+    <h2>Technical Skills</h2>
+    <h3>Programming Languages:</h3>
+    <ul>
+        {% for language in resume_data.technical_skills.programming_languages %}
+            <li>{{ language }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Software Knowledge:</h3>
+    <ul>
+        {% for software in resume_data.technical_skills.software_knowledge %}
+            <li>{{ software }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Operating Systems:</h3>
+    <ul>
+        {% for os in resume_data.technical_skills.operating_systems %}
+            <li>{{ os }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<footer>
+    <p>© Tyler Murray</p>
+</footer>
+{% endblock %}

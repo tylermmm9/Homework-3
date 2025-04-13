@@ -1,0 +1,7 @@
+"experience_id","position_id","name","description","hyperlink","start_date","end_date"
+"1","1","Expansion Intern","Sourced and engaged over 100 potential new members weekly to establish a new colony at Grand Valley State University, Texas A&M University, and University of Toledo.",NULL,"2024-09-01","Present"
+"2","2","Service Center Representative","Provided routine clerical support within a reception hall, answered phones, processed mail/packages, and assisted with residence hall security.",NULL,"2023-09-01","2024-08-30"
+"3","3","Administrative Assistant Intern","Assisted school administration, sorted books, copied papers, delivered materials, and supported teachers with classroom activities.",NULL,"2023-06-01","2023-08-30"
+"4","4","Texas Lawmakers API Newspaper","Developing an AI-driven newsletter platform aggregating, curating, and summarizing news for Texas lawmakers.",NULL,"2025-01-01","Present"
+"5","5","Porygon: Pokemon Chatbot","Built an interactive chatbot in Python that learns from interactions and retrieves data from various sources like PokemonDB and Bulbapedia.",NULL,"2024-05-01","Present"
+"6","6","Find Me Clothes - Phone App","Collaborated with peers in developing a clothing search app with cart and search engine functionality.",NULL,"2022-08-01","2022-10-30"
